@@ -19,3 +19,11 @@
 - IP Protocol Scan (-sO): It determines which IP protocols (TCP, UDP, ICMP, etc.) are supported by the target.
 - Idle Scan (-sI): Also known as zombie scan, it uses a third-party host to hide the attacker's identity.
 - Fragmentation Scan (-f): It sends fragmented packets to bypass packet filters and firewalls.
+
+```bash
+chmod +x nmap_scans.sh
+```
+
+```bash
+./nmap_scans.sh
+```
