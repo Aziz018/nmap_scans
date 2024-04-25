@@ -24,23 +24,23 @@ echo -n "Enter your choice: "; read opt
 echo -n "Enter the IP address: "; read target
 
 case $opt in
-    1) nmap -sS "$target" ;;
-    2) nmap -sT "$target" ;;
-    3) nmap -sA "$target" ;;
-    4) nmap -sF "$target" ;;
-    5) nmap -sX "$target" ;;
-    6) nmap -sN "$target" ;;
-    7) nmap -sU "$target" ;;
-    8) nmap -sW "$target" ;;
-    9) nmap -sM "$target" ;;
-    10) nmap -sR "$target" ;;
-    11) nmap -sV "$target" ;;
-    12) nmap -O "$target" ;;
-    13) nmap -A "$target" ;;
-    14) nmap -sC "$target" ;;
-    15) nmap -sO "$target" ;;
-    16) nmap -sI "$target" ;;
-    17) nmap -f "$target" ;;
-    18) echo -n "Enter your options: "; read opts; nmap $opts "$target" ;;
+    1) echo -e "Starting TCP SYN Scan\n" && sudo nmap -sS "$target" ;;
+    2) echo -e "Starting TCP Connect Scan\n" && sudo nmap -sT "$target" ;;
+    3) echo -e "Starting TCP ACK Scan\n" && sudo nmap -sA "$target" ;;
+    4) echo -e "Starting TCP FIN Scan" && sudo nmap -sF "$target" ;;
+    5) echo -e "Starting TCP Xmas Scan" && sudo nmap -sX "$target" ;;
+    6) echo -e "Starting TCP Null Scan" && sudo nmap -sN "$target" ;;
+    7) echo -e "Starting UDP Scan" && sudo nmap -sU "$target" ;;
+    8) echo -e "Starting TCP Window Scan" && sudo nmap -sW "$target" ;;
+    9) echo -e "Starting TCP Maimon Scan" && sudo nmap -sM "$target" ;;
+    10) echo -e "Starting TCP RPC Scan" && sudo nmap -sR "$target" ;;
+    11) echo -e "Starting Version Detection" && sudo nmap -sV "$target" ;;
+    12) echo -e "Starting OS Detection" && sudo nmap -O "$target" ;;
+    13) echo -e "Starting Aggressive Scan" && sudo nmap -A "$target" ;;
+    14) echo -e "Starting Script Scan" && sudo nmap -sC "$target" ;;
+    15) echo -e "Starting IP Protocol Scan" && sudo nmap -sO "$target" ;;
+    16) echo -e "Starting Idle Scan" && sudo nmap -sI "$target" ;;
+    17) echo -e "Starting Fragmentation Scan" && sudo nmap -f "$target" ;;
+    18) echo -n "Enter your options: "; read opts; sudo nmap $opts "$target" ;;
     *)  echo "Invalid option. Please choose a number between 1 and 18." ;;
 esac
