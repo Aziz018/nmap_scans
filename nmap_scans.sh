@@ -44,3 +44,4 @@ case $opt in
     18) echo -n "Enter your options: "; read opts; sudo nmap $opts "$target" ;;
     *)  echo "Invalid option. Please choose a number between 1 and 18." ;;
 esac
+
